@@ -14,6 +14,7 @@ const int pulsador_menos = 7;
 // VARIABLES DE ESTADO DE BOTONES
 int valor_pulsador_mas;
 int valor_pulsador_menos;
+int hora_pm;
 
 void setup() {
 // CONFIGURAR PINES COMO ENTRADAS
@@ -85,8 +86,6 @@ void loop() {
       Serial.println();
       Serial.println();
       Serial.println();
-<<<<<<< Updated upstream
-=======
 
 
     if (t.hour > 12) {
@@ -95,9 +94,6 @@ void loop() {
 
       switch (hora_pm) {
         case 1:
-<<<<<<< Updated upstream
-         
-=======
              switch (t.min) {
                 case 0:
                  
@@ -137,46 +133,462 @@ void loop() {
                   break;
                 }
                
->>>>>>> Stashed changes
           break;
         case 2:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 3:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 4:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 5:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 6:
-          
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
+                  
           break;
         case 7:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                      Serial.print("funciona");
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 8:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 9:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 10:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 11:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
         case 12:
+            switch (t.min) {
+                case 0:
+                 
+                  break;
+                case 5:
+                  
+                  break;
+                case 10:
+                  
+                  break;
+                case 15:
+                  
+                  break;
+                case 20:
+                  
+                  break;
+                case 25:
+                  
+                  break;
+                case 30:
+                  
+                  break;
+                case 35:
+                  
+                  break;
+                case 40:
+                  
+                  break;
+                case 45:
+                  
+                  break;
+                case 50:
+                  
+                  break;
+                case 55:
+                  
+                  break;
+                }
           
           break;
  
        }
 
        
->>>>>>> Stashed changes
     }
   
   }
