@@ -1,7 +1,22 @@
-
-
-
 #include <DS1302.h>
+#include <Adafruit_NeoPixel.h>
+#ifdef __AVR__
+#include <avr/power.h> // Required for 16 MHz Adafruit Trinket
+#endif
+
+// Which pin on the Arduino is connected to the NeoPixels?
+#define PIN        6 
+
+// How many NeoPixels are attached to the Arduino?
+#define NUMPIXELS 60 
+
+// When setting up the NeoPixel library, we tell it how many pixels,
+// and which pin to use to send signals. Note that for older NeoPixel
+// strips you might need to change the third parameter -- see the
+// strandtest example for more information on possible values.
+Adafruit_NeoPixel pixels(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
+
+#define DELAYVAL 500 // Time (in milliseconds) to pause between pixels
 
 // Inicializacion del modulo.
 DS1302 rtc(2, 3, 4);
@@ -10,6 +25,11 @@ Time t;
 // ASIGNACION DE PINES PULSADOR
 const int pulsador_mas = 8;
 const int pulsador_menos = 7;
+
+//Color del led en RGB
+const int red = 255;
+const int green = 255;
+const int blue = 255;
  
 // VARIABLES DE ESTADO DE BOTONES
 int valor_pulsador_mas;
@@ -17,14 +37,25 @@ int valor_pulsador_menos;
 int hora_pm;
 
 void setup() {
-// CONFIGURAR PINES COMO ENTRADAS
- pinMode(pulsador_mas, INPUT);
+  // CONFIGURAR PINES COMO ENTRADAS
+  pinMode(pulsador_mas, INPUT);
   pinMode(pulsador_menos, INPUT);
-// Inicializacion del puerto serie.
-Serial.begin(9600);
+
+   // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
+  // Any other board, you can remove this part (but no harm leaving it):
+  #if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
+    clock_prescale_set(clock_div_1);
+  #endif
+  // END of Trinket-specific code.
+  pixels.begin(); // INITIALIZE NeoPixel strip object (REQUIRED)
+  
+  // Inicializacion del puerto serie.
+  Serial.begin(9600);
 }
 
 void loop() {
+  pixels.clear(); // Set all pixel colors to 'off'
+  
   // Obtencion de datos
   t = rtc.getTime();
 
@@ -96,7 +127,14 @@ void loop() {
         case 1:
              switch (t.min) {
                 case 0:
-                 
+                     pixels.setPixelColor(1, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(2, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(6, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(7, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(49, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(50, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(51, pixels.Color(red, green, blue));
+                     pixels.show();   // Send the updated pixel colors to the hardware.
                   break;
                 case 5:
                   
