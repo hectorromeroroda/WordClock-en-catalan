@@ -14,7 +14,6 @@ const int pulsador_menos = 7;
 // VARIABLES DE ESTADO DE BOTONES
 int valor_pulsador_mas;
 int valor_pulsador_menos;
-int hora_pm
 
 void setup() {
 // CONFIGURAR PINES COMO ENTRADAS
@@ -86,53 +85,6 @@ void loop() {
       Serial.println();
       Serial.println();
       Serial.println();
-
-
-    if (t.hour > 12) {
-      hora_pm = t.hour-12;  
-    }
-
-      switch (hora_pm) {
-        case 1:
-         
-          break;
-        case 2:
-          
-          break;
-        case 3:
-          
-          break;
-        case 4:
-          
-          break;
-        case 5:
-          
-          break;
-        case 6:
-          
-          break;
-        case 7:
-          
-          break;
-        case 8:
-          
-          break;
-        case 9:
-          
-          break;
-        case 10:
-          
-          break;
-        case 11:
-          
-          break;
-        case 12:
-          
-          break;
- 
-       }
-
-       
     }
   
   }
