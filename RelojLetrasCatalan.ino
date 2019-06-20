@@ -8,7 +8,7 @@
 #define PIN        6 
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS 60 
+#define NUMPIXELS 120 
 
 // When setting up the NeoPixel library, we tell it how many pixels,
 // and which pin to use to send signals. Note that for older NeoPixel
@@ -27,6 +27,8 @@ const int pulsador_horas_mas = 8;
 const int pulsador_horas_menos = 7;
 const int pulsador_minutos_mas = 13;
 const int pulsador_minutos_menos = 12;
+const int pulsador_rgb_mas = 11;
+const int pulsador_rgb_menos = 10;
 
 //Color del led en RGB
 const int red = 255;
@@ -38,6 +40,8 @@ int valor_pulsador_horas_mas;
 int valor_pulsador_horas_menos;
 int valor_pulsador_minutos_mas;
 int valor_pulsador_minutos_menos;
+int valor_pulsador_rgb_mas;
+int valor_pulsador_rgb_menos;
 
 //VARIABLES PARA CALCULO HORAS
 int hora_pm;
@@ -50,6 +54,8 @@ void setup() {
   pinMode(pulsador_horas_menos, INPUT);
   pinMode(pulsador_minutos_mas, INPUT);
   pinMode(pulsador_minutos_menos, INPUT);
+  pinMode(pulsador_rgb_mas, INPUT);
+  pinMode(pulsador_rgb_menos, INPUT);
 
    // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
@@ -75,6 +81,8 @@ void loop() {
   valor_pulsador_horas_menos = digitalRead(pulsador_horas_menos);
   valor_pulsador_minutos_mas = digitalRead(pulsador_minutos_mas);
   valor_pulsador_minutos_menos = digitalRead(pulsador_minutos_menos);
+  valor_pulsador_rgb_mas = digitalRead(pulsador_rgb_mas);
+  valor_pulsador_rgb_menos = digitalRead(pulsador_rgb_menos);
 
   // SE OPRIMIO EL BOTON DE ENCENDIDO?
   if (valor_pulsador_horas_mas == HIGH) {
@@ -101,6 +109,16 @@ void loop() {
             }
         }
     }
+
+    if (valor_pulsador_rgb_mas == HIGH) {
+    
+    
+    }else{
+      if (valor_pulsador_rgb_menos == HIGH){
+        
+      }
+    }
+    
       // Publicar en LCD
       // Se publicara el dia de la semana
       Serial.print("HOY:"); 
