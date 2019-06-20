@@ -34,7 +34,11 @@ const int blue = 255;
 // VARIABLES DE ESTADO DE BOTONES
 int valor_pulsador_mas;
 int valor_pulsador_menos;
+
+//VARIABLES PARA CALCULO HORAS
 int hora_pm;
+int minutos_sueltos;
+int minutos_letras;
 
 void setup() {
   // CONFIGURAR PINES COMO ENTRADAS
@@ -54,6 +58,7 @@ void setup() {
 }
 
 void loop() {
+  minutos_sueltos = 0;
   pixels.clear(); // Set all pixel colors to 'off'
   
   // Obtencion de datos
@@ -123,9 +128,61 @@ void loop() {
       hora_pm = t.hour-12;  
     }
 
+    minutos_sueltos = t.min % 5;  
+    if (minutos_sueltos != 0) {
+      minutos_letras = t.min - minutos_sueltos;
+            
+      Serial.print(" He entrado en minutos sueltos = ");
+      Serial.print(minutos_letras);
+      Serial.println();
+      Serial.println();
+      
+      switch (minutos_sueltos) {
+        case 1:
+            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
+            Serial.print(" Minuto suelto = ");
+            Serial.print(minutos_sueltos);
+            Serial.println();
+            Serial.println();
+          break;
+        case 2:
+            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
+            Serial.print(" Minuto suelto = ");
+            Serial.print(minutos_sueltos);
+            Serial.println();
+            Serial.println();
+          break;
+        case 3:
+            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
+            Serial.print(" Minuto suelto = ");
+            Serial.print(minutos_sueltos);
+            Serial.println();
+            Serial.println();
+          break;
+        case 4:
+            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
+            Serial.print(" Minuto suelto = ");
+            Serial.print(minutos_sueltos);
+            Serial.println();
+            Serial.println();
+          break;
+      }
+      
+      
+    }else{
+      minutos_letras = t.min;
+      Serial.print("He entrado en minutos en punto = ");
+      Serial.print(minutos_letras);
+      Serial.println();
+      Serial.println();
+    }
+    
+
+    
+
       switch (hora_pm) {
         case 1:
-             switch (t.min) {
+             switch (minutos_letras) {
                 case 0:
                      pixels.setPixelColor(1, pixels.Color(red, green, blue));
                      pixels.setPixelColor(2, pixels.Color(red, green, blue));
@@ -173,7 +230,7 @@ void loop() {
                
           break;
         case 2:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -214,7 +271,7 @@ void loop() {
           
           break;
         case 3:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -255,7 +312,7 @@ void loop() {
           
           break;
         case 4:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -296,7 +353,7 @@ void loop() {
           
           break;
         case 5:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -337,7 +394,7 @@ void loop() {
           
           break;
         case 6:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -378,7 +435,7 @@ void loop() {
                   
           break;
         case 7:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -401,7 +458,7 @@ void loop() {
                   
                   break;
                 case 35:
-                      Serial.print("funciona");
+                     
                   break;
                 case 40:
                   
@@ -419,7 +476,7 @@ void loop() {
           
           break;
         case 8:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -460,7 +517,7 @@ void loop() {
           
           break;
         case 9:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -489,7 +546,7 @@ void loop() {
                   
                   break;
                 case 45:
-                  
+                   
                   break;
                 case 50:
                   
@@ -501,7 +558,7 @@ void loop() {
           
           break;
         case 10:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -542,7 +599,7 @@ void loop() {
           
           break;
         case 11:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
@@ -583,7 +640,7 @@ void loop() {
           
           break;
         case 12:
-            switch (t.min) {
+            switch (minutos_letras) {
                 case 0:
                  
                   break;
