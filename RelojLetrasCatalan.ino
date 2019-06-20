@@ -23,8 +23,10 @@ DS1302 rtc(2, 3, 4);
 Time t;
 
 // ASIGNACION DE PINES PULSADOR
-const int pulsador_mas = 8;
-const int pulsador_menos = 7;
+const int pulsador_horas_mas = 8;
+const int pulsador_horas_menos = 7;
+const int pulsador_minutos_mas = 13;
+const int pulsador_minutos_menos = 12;
 
 //Color del led en RGB
 const int red = 255;
@@ -32,8 +34,10 @@ const int green = 255;
 const int blue = 255;
  
 // VARIABLES DE ESTADO DE BOTONES
-int valor_pulsador_mas;
-int valor_pulsador_menos;
+int valor_pulsador_horas_mas;
+int valor_pulsador_horas_menos;
+int valor_pulsador_minutos_mas;
+int valor_pulsador_minutos_menos;
 
 //VARIABLES PARA CALCULO HORAS
 int hora_pm;
@@ -42,8 +46,10 @@ int minutos_letras;
 
 void setup() {
   // CONFIGURAR PINES COMO ENTRADAS
-  pinMode(pulsador_mas, INPUT);
-  pinMode(pulsador_menos, INPUT);
+  pinMode(pulsador_horas_mas, INPUT);
+  pinMode(pulsador_horas_menos, INPUT);
+  pinMode(pulsador_minutos_mas, INPUT);
+  pinMode(pulsador_minutos_menos, INPUT);
 
    // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
@@ -65,22 +71,36 @@ void loop() {
   t = rtc.getTime();
 
   // Obtencion estado pulsador
-  valor_pulsador_mas = digitalRead(pulsador_mas);
-  valor_pulsador_menos = digitalRead(pulsador_menos);
+  valor_pulsador_horas_mas = digitalRead(pulsador_horas_mas);
+  valor_pulsador_horas_menos = digitalRead(pulsador_horas_menos);
+  valor_pulsador_minutos_mas = digitalRead(pulsador_minutos_mas);
+  valor_pulsador_minutos_menos = digitalRead(pulsador_minutos_menos);
 
   // SE OPRIMIO EL BOTON DE ENCENDIDO?
-  if (valor_pulsador_mas == HIGH) {
+  if (valor_pulsador_horas_mas == HIGH) {
     // Desproteger contra escritura
     rtc.halt(false);
     rtc.writeProtect(false);
     rtc.setTime(t.hour + 1, t.min, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
     
   }else{
-    if (valor_pulsador_menos == HIGH) {
+    if (valor_pulsador_horas_menos == HIGH) {
       rtc.halt(false);
       rtc.writeProtect(false);
       rtc.setTime(t.hour - 1, t.min, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
     }else{
+        if (valor_pulsador_minutos_menos == HIGH) {
+        rtc.halt(false);
+        rtc.writeProtect(false);
+        rtc.setTime(t.hour, t.min - 1, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+        }else{
+          if (valor_pulsador_minutos_mas == HIGH) {
+            rtc.halt(false);
+            rtc.writeProtect(false);
+            rtc.setTime(t.hour, t.min + 1, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+            }
+        }
+    }
       // Publicar en LCD
       // Se publicara el dia de la semana
       Serial.print("HOY:"); 
@@ -2114,7 +2134,7 @@ void loop() {
        }
 
        
-    }
+    
   
   }
 
