@@ -31,9 +31,9 @@ const byte pulsador_rgb_mas = 11;
 const byte pulsador_rgb_menos = 10;
 
 //Color del led en RGB
-const byte red = 255;
-const byte green = 255;
-const byte blue = 255;
+const byte red = 150;
+const byte green = 100;
+const byte blue = 60;
 //const byte porcentaje_rgb = 5;
 
  
@@ -273,6 +273,10 @@ void loop() {
                      pixels.setPixelColor(30, pixels.Color(red, green, blue));
                      pixels.setPixelColor(31, pixels.Color(red, green, blue));
                      pixels.setPixelColor(32, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(34, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(35, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(36, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(37, pixels.Color(red, green, blue));
                      pixels.setPixelColor(40, pixels.Color(red, green, blue));
                      pixels.setPixelColor(41, pixels.Color(red, green, blue));
                      pixels.setPixelColor(42, pixels.Color(red, green, blue));
@@ -743,6 +747,7 @@ void loop() {
                      pixels.setPixelColor(101, pixels.Color(red, green, blue));
                      pixels.setPixelColor(102, pixels.Color(red, green, blue));
                      pixels.setPixelColor(103, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(105, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 10:
