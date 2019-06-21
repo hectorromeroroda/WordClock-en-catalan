@@ -115,6 +115,8 @@ void loop() {
     
     }else{
       if (valor_pulsador_rgb_menos == HIGH){
+
+
         
       }
     }
