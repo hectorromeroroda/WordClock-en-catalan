@@ -34,6 +34,8 @@ const byte pulsador_rgb_menos = 10;
 const byte red = 255;
 const byte green = 255;
 const byte blue = 255;
+//const byte porcentaje_rgb = 5;
+
  
 // VARIABLES DE ESTADO DE BOTONES
 byte valor_pulsador_horas_mas;
@@ -111,7 +113,8 @@ void loop() {
     }
 
     if (valor_pulsador_rgb_mas == HIGH) {
-    
+    //byte resultado = (porcentaje_rgb * red)/100;
+   
     
     }else{
       if (valor_pulsador_rgb_menos == HIGH){
@@ -132,11 +135,9 @@ void loop() {
       Serial.println();
       Serial.println();
 
-
+    hora_pm = t.hour;
     if (t.hour > 12) {
       hora_pm = t.hour-12;  
-    }else{
-      hora_pm = t.hour;
     }
 
     minutos_sueltos = t.min % 5;  
@@ -165,9 +166,6 @@ void loop() {
       minutos_letras = t.min;
     }
     
-
-    
-
       switch (hora_pm) {
         case 1:
              switch (minutos_letras) {
