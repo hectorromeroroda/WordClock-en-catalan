@@ -92,22 +92,26 @@ void loop() {
     rtc.halt(false);
     rtc.writeProtect(false);
     rtc.setTime(t.hour + 1, t.min, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+     Serial.print( "boton hora mas");
     
   }else{
     if (valor_pulsador_horas_menos == HIGH) {
       rtc.halt(false);
       rtc.writeProtect(false);
       rtc.setTime(t.hour - 1, t.min, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+      Serial.print( "boton hora menos");
     }else{
         if (valor_pulsador_minutos_menos == HIGH) {
         rtc.halt(false);
         rtc.writeProtect(false);
         rtc.setTime(t.hour, t.min - 1, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+        Serial.print( "boton min mas");
         }else{
           if (valor_pulsador_minutos_mas == HIGH) {
             rtc.halt(false);
             rtc.writeProtect(false);
             rtc.setTime(t.hour, t.min + 1, t.sec);  // Configurar hora en formato 24hs con min y seg: 17:00:00 HORAS.
+            Serial.print( "boton min menos ");
             }
         }
     }
