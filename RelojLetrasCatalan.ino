@@ -27,8 +27,6 @@ const byte pulsador_horas_mas = 8;
 const byte pulsador_horas_menos = 7;
 const byte pulsador_minutos_mas = 13;
 const byte pulsador_minutos_menos = 12;
-const byte pulsador_rgb_mas = 11;
-const byte pulsador_rgb_menos = 10;
 
 //Color del led en RGB
 const byte red = 250;
@@ -42,8 +40,6 @@ byte valor_pulsador_horas_mas;
 byte valor_pulsador_horas_menos;
 byte valor_pulsador_minutos_mas;
 byte valor_pulsador_minutos_menos;
-byte valor_pulsador_rgb_mas;
-byte valor_pulsador_rgb_menos;
 
 //VARIABLES PARA CALCULO HORAS
 byte hora_pm;
@@ -56,9 +52,7 @@ void setup() {
   pinMode(pulsador_horas_menos, INPUT);
   pinMode(pulsador_minutos_mas, INPUT);
   pinMode(pulsador_minutos_menos, INPUT);
-  pinMode(pulsador_rgb_mas, INPUT);
-  pinMode(pulsador_rgb_menos, INPUT);
-
+  
    // These lines are specifically to support the Adafruit Trinket 5V 16 MHz.
   // Any other board, you can remove this part (but no harm leaving it):
   #if defined(__AVR_ATtiny85__) && (F_CPU == 16000000)
@@ -83,8 +77,6 @@ void loop() {
   valor_pulsador_horas_menos = digitalRead(pulsador_horas_menos);
   valor_pulsador_minutos_mas = digitalRead(pulsador_minutos_mas);
   valor_pulsador_minutos_menos = digitalRead(pulsador_minutos_menos);
-  valor_pulsador_rgb_mas = digitalRead(pulsador_rgb_mas);
-  valor_pulsador_rgb_menos = digitalRead(pulsador_rgb_menos);
 
   // SE OPRIMIO EL BOTON DE ENCENDIDO?
   if (valor_pulsador_horas_mas == HIGH) {
@@ -116,17 +108,6 @@ void loop() {
         }
     }
 
-    if (valor_pulsador_rgb_mas == HIGH) {
-    //byte resultado = (porcentaje_rgb * red)/100;
-   
-    
-    }else{
-      if (valor_pulsador_rgb_menos == HIGH){
-
-
-        
-      }
-    }
 
       Serial.print("HORA:");  // Hora en formato 0-23.
       Serial.print(t.hour, DEC);
@@ -154,23 +135,18 @@ void loop() {
       
       switch (minutos_sueltos) {
         case 1:
-            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
             pixels.setPixelColor(114, pixels.Color(red, green, blue));
-             Serial.print("he pasado por aki");
           break;
         case 2:
-            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
             pixels.setPixelColor(113, pixels.Color(red, green, blue));
             pixels.setPixelColor(114, pixels.Color(red, green, blue));
           break;
         case 3:
-            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
             pixels.setPixelColor(112, pixels.Color(red, green, blue));
             pixels.setPixelColor(113, pixels.Color(red, green, blue));
             pixels.setPixelColor(114, pixels.Color(red, green, blue));
           break;
         case 4:
-            //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
             pixels.setPixelColor(111, pixels.Color(red, green, blue));
             pixels.setPixelColor(112, pixels.Color(red, green, blue));
             pixels.setPixelColor(113, pixels.Color(red, green, blue));
