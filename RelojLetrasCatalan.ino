@@ -8,7 +8,7 @@
 #define PIN        6 
 
 // How many NeoPixels are attached to the Arduino?
-#define NUMPIXELS 120 
+#define NUMPIXELS 115 
 
 // When setting up the NeoPixel library, we tell it how many pixels,
 // and which pin to use to send signals. Note that for older NeoPixel
@@ -31,9 +31,9 @@ const byte pulsador_rgb_mas = 11;
 const byte pulsador_rgb_menos = 10;
 
 //Color del led en RGB
-const byte red = 150;
+const byte red = 250;
 const byte green = 100;
-const byte blue = 60;
+const byte blue = 30;
 //const byte porcentaje_rgb = 5;
 
  
@@ -151,19 +151,26 @@ void loop() {
       switch (minutos_sueltos) {
         case 1:
             //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
-
+            pixels.setPixelColor(114, pixels.Color(red, green, blue));
+             Serial.print("he pasado por aki");
           break;
         case 2:
             //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
-
+            pixels.setPixelColor(113, pixels.Color(red, green, blue));
+            pixels.setPixelColor(114, pixels.Color(red, green, blue));
           break;
         case 3:
             //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
-
+            pixels.setPixelColor(112, pixels.Color(red, green, blue));
+            pixels.setPixelColor(113, pixels.Color(red, green, blue));
+            pixels.setPixelColor(114, pixels.Color(red, green, blue));
           break;
         case 4:
             //PRECARGAR LOS LEDS DE LOS MINUTOS SUELTOS (sin hacer el show) !!!!!!!!!!!!!!!!! ----------------------------------------------------------------------
-
+            pixels.setPixelColor(111, pixels.Color(red, green, blue));
+            pixels.setPixelColor(112, pixels.Color(red, green, blue));
+            pixels.setPixelColor(113, pixels.Color(red, green, blue));
+            pixels.setPixelColor(114, pixels.Color(red, green, blue));
           break;
       }    
     }else{
