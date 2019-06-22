@@ -142,6 +142,10 @@ void loop() {
     hora_pm = t.hour;
     if (t.hour > 12) {
       hora_pm = t.hour-12;  
+    }else{
+      if (t.hour == 0) {
+        hora_pm = 12;
+      }
     }
 
     minutos_sueltos = t.min % 5;  
@@ -1530,6 +1534,7 @@ void loop() {
                      pixels.setPixelColor(12, pixels.Color(red, green, blue));
                      pixels.setPixelColor(13, pixels.Color(red, green, blue));
                      pixels.setPixelColor(14, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(15, pixels.Color(red, green, blue));
                      pixels.setPixelColor(27, pixels.Color(red, green, blue));
                      pixels.setPixelColor(28, pixels.Color(red, green, blue));
                      pixels.setPixelColor(29, pixels.Color(red, green, blue));
