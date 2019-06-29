@@ -172,6 +172,11 @@ void loop() {
                      pixels.setPixelColor(75, pixels.Color(red, green, blue));
                      pixels.setPixelColor(76, pixels.Color(red, green, blue));
                      pixels.setPixelColor(77, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hardware.
                   break;
                 case 5:
@@ -434,6 +439,11 @@ void loop() {
                      pixels.setPixelColor(49, pixels.Color(red, green, blue));
                      pixels.setPixelColor(50, pixels.Color(red, green, blue));
                      pixels.setPixelColor(51, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hardware.
                   break;
                 case 5:
@@ -719,6 +729,11 @@ void loop() {
                      pixels.setPixelColor(64, pixels.Color(red, green, blue));
                      pixels.setPixelColor(65, pixels.Color(red, green, blue));
                      pixels.setPixelColor(66, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -1003,6 +1018,11 @@ void loop() {
                      pixels.setPixelColor(60, pixels.Color(red, green, blue));
                      pixels.setPixelColor(61, pixels.Color(red, green, blue));
                      pixels.setPixelColor(62, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -1306,6 +1326,11 @@ void loop() {
                      pixels.setPixelColor(70, pixels.Color(red, green, blue));
                      pixels.setPixelColor(71, pixels.Color(red, green, blue));
                      pixels.setPixelColor(72, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -1590,6 +1615,11 @@ void loop() {
                      pixels.setPixelColor(101, pixels.Color(red, green, blue));
                      pixels.setPixelColor(102, pixels.Color(red, green, blue));
                      pixels.setPixelColor(103, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -1862,6 +1892,11 @@ void loop() {
                      pixels.setPixelColor(89, pixels.Color(red, green, blue));
                      pixels.setPixelColor(90, pixels.Color(red, green, blue));
                      pixels.setPixelColor(91, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -2134,6 +2169,11 @@ void loop() {
                      pixels.setPixelColor(57, pixels.Color(red, green, blue));
                      pixels.setPixelColor(58, pixels.Color(red, green, blue));
                      pixels.setPixelColor(59, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -2417,6 +2457,11 @@ void loop() {
                      pixels.setPixelColor(87, pixels.Color(red, green, blue));
                      pixels.setPixelColor(88, pixels.Color(red, green, blue));
                      pixels.setPixelColor(89, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -2689,6 +2734,11 @@ void loop() {
                      pixels.setPixelColor(82, pixels.Color(red, green, blue));
                      pixels.setPixelColor(83, pixels.Color(red, green, blue));
                      pixels.setPixelColor(84, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
@@ -3219,7 +3269,7 @@ void loop() {
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 }
-          
+                     
           break;
       case 11:
             switch (minutos_letras) {
@@ -3234,6 +3284,11 @@ void loop() {
                      pixels.setPixelColor(53, pixels.Color(red, green, blue));
                      pixels.setPixelColor(54, pixels.Color(red, green, blue));
                      pixels.setPixelColor(55, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(97, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(98, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(99, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(92, pixels.Color(red, green, blue));
+                     pixels.setPixelColor(93, pixels.Color(red, green, blue));
                      pixels.show();   // Send the updated pixel colors to the hard
                   break;
                 case 5:
